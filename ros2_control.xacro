@@ -24,7 +24,7 @@
   </ros2_control>
   <smartcart>
       <plugin name="smartcart_ros2_control" name="libsmartcart_ros2_control.so"> <!--tells smartcart to use ros2 control-->
-          <parameters></parameters>
+          <parameters>$(find smart-cart)/config/smart_controllers.yaml</parameters>
       </plugin>
   </smartcart>
 </robot>

@@ -3,7 +3,7 @@
 
   <ros2_control name="SmartSystem" type="system">
         <hardware>
-            <plugin>smartcart_ros2_control/SmartSystem</plugin>
+            <plugin>smartcart_ros2_control/SmartSystem</plugin> <!--hardware interface-->
         </hardware>
         <joint name="left_wheel_joint">
             <command_interface name="velocity">
@@ -22,5 +22,9 @@
             <state_interface name="position"/>
         </joint>
   </ros2_control>
-
+  <smartcart>
+      <plugin name="smartcart_ros2_control" name="libsmartcart_ros2_control.so"> <!--tells smartcart to use ros2 control-->
+          <parameters></parameters>
+      </plugin>
+  </smartcart>
 </robot>

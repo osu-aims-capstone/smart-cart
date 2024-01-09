@@ -1,20 +1,7 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
-
-    <!-- toggle between gazebo sim and ros2 control -->
-    <xacro:arg name="use_ros2" default="true"/>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
     <xacro:include filename="robot_core.xacro" />
-
-    <xacro:if value="$(arg use_ros2)">
-        <xacro:include filename="ros2_control.xacro" />
-    </xacro:if>
-
-    <xacro:unless value="$(arg use_ros2)">
-        <xacro:include filename="gazebo_control.xacro" /> <!-- TODO: update rsp file 11:18-->
-    </xacro:unless>
     
-    <xacro:include filename="lidar.xacro" />
-    <xacro:include filename="camera.xacro" />
-
+    <xacro:include filename="gazebo_control.xacro" />
 </robot>

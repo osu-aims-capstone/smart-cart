@@ -15,7 +15,7 @@
 import rclpy
 from rclpy.node import Node
 
-from std_msgs.msg import Int32
+from std_msgs.msg import Int32MultiArray
 
 from .decoder import Decoder
 import time
@@ -37,6 +37,7 @@ def callback(self,way):
 
 #e1 = rotary_encoder.decoder(pi, 23, 24, callback)
 e1 = Decoder(pi, 23, 24, callback)
+e2 = Decoder(pi, 5, 6, callback)
 
 class MinimalPublisher(Node):
 
@@ -54,8 +55,8 @@ class MinimalPublisher(Node):
                 #!/usr/bin/env python
 
     
-        msg = Int32()
-        msg.data = e1.pos
+        msg = Int32MultiArray()
+        msg.data = [e1.pos,e2.pos]
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%d"' % msg.data)
         self.i += 1

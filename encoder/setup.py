@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-                'talker = encoder.publisher_encoder:main',
+                'encoder = encoder.publisher_encoder:main',
                 'listener = encoder.subscriber_velocity_calculation:main',
         ],
     },

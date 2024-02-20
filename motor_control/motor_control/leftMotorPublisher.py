@@ -15,25 +15,69 @@
 import rclpy
 from rclpy.node import Node
 
-from std_msgs.msg import String
+from std_msgs.msg import Int32
 
 
 class MinimalPublisher(Node):
-
+    Target = -1
+    currentVel =0
     def __init__(self):
         super().__init__('minimal_publisher')
-        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        self.publisher_ = self.create_publisher(Int32, 'motor', 10)
+        self.subscription = self.create_subscription(
+            Int32, 
+            'target', 
+            self.target_callback, 
+            10)
+
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
+        self.subscription = self.create_subscription(
+            Int32, 
+            'velocity', 
+            self.velocity_callback, 
+            10)
+
+        timer_period = 0.5  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.i = 0
+
+    def target_callback(self, msg):
+        self.get_logger().info("Distance received: %d" % msg.data)
+        self.Target = msg.data
+
+    def velocity_callback(self, msg):
+        self.get_logger().info("Distance received: %d" % msg.data)
+        self.currentVel = msg.data
+
     def timer_callback(self):
-        msg = String()
-        msg.data = 'Hello World: %d' % self.i
+        msg = Int32()
+        msg.data = PID(self.Target, self.currentVel)
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
 
+    def PID(Target, currentVel):
+        SAMPLETIME = 0.5
+        TARGET = Target #m/s
+        KP = 0.0001
+        KD = 0.0005
+        KI = 0.00005
+
+        #m1 is left motor and m2 is right motor
+
+        m1_speed = 0
+        e1_prev_error = 0
+        e1_sum_error = 0
+        e1_error = TARGET - currentVel  
+        m1_speed += (e1_error * KP) + (e1_prev_error * KD) + (e1_sum_error * KI)
+        m1_speed = max(min(1, m1_speed), 0)
+        e1_prev_error = e1_error 
+        e1_sum_error += e1_error
+   
+        return m1_speed
 
 def main(args=None):
     rclpy.init(args=args)

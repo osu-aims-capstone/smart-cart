@@ -15,21 +15,32 @@
 import rclpy
 from rclpy.node import Node
 
-from std_msgs.msg import String
+from std_msgs.msg import Int32
 
+import threading
+from gpiozero import DigitalInputDevice, Robot
+from time import sleep
+
+import time
+import RPi.GPIO as GPIO
+
+r = Robot((10,9), (8,7)) 
 
 class MinimalSubscriber(Node):
 
     def __init__(self):
         super().__init__('minimal_subscriber')
         self.subscription = self.create_subscription(
-            String,
+            Int32,
             'motor',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
+        m1_speed = 0.4
+        m2_speed = 0.4
+        r .value = (m1_speed, m2_speed)
         self.get_logger().info('I heard: "%s"' % msg.data)
 
 

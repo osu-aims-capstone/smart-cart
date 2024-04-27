@@ -1,0 +1,45 @@
+running egg_info
+creating build/motor_control/motor_control.egg-info
+writing build/motor_control/motor_control.egg-info/PKG-INFO
+writing dependency_links to build/motor_control/motor_control.egg-info/dependency_links.txt
+writing entry points to build/motor_control/motor_control.egg-info/entry_points.txt
+writing requirements to build/motor_control/motor_control.egg-info/requires.txt
+writing top-level names to build/motor_control/motor_control.egg-info/top_level.txt
+writing manifest file 'build/motor_control/motor_control.egg-info/SOURCES.txt'
+reading manifest file 'build/motor_control/motor_control.egg-info/SOURCES.txt'
+writing manifest file 'build/motor_control/motor_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build
+creating /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib
+creating /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control
+copying motor_control/leftMotorPublisher.py -> /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control
+copying motor_control/rightMotorPublisher.py -> /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control
+copying motor_control/movementSubscriber.py -> /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control
+copying motor_control/__init__.py -> /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control
+copying /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control/leftMotorPublisher.py -> /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control
+copying /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control/rightMotorPublisher.py -> /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control
+copying /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control/movementSubscriber.py -> /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control
+copying /home/smartcart/ros2_ws/src/motor_control/build/motor_control/build/lib/motor_control/__init__.py -> /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control
+byte-compiling /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control/leftMotorPublisher.py to leftMotorPublisher.cpython-310.pyc
+byte-compiling /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control/rightMotorPublisher.py to rightMotorPublisher.cpython-310.pyc
+byte-compiling /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control/movementSubscriber.py to movementSubscriber.cpython-310.pyc
+byte-compiling /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/smartcart/ros2_ws/src/motor_control/install/motor_control/share/ament_index
+creating /home/smartcart/ros2_ws/src/motor_control/install/motor_control/share/ament_index/resource_index
+creating /home/smartcart/ros2_ws/src/motor_control/install/motor_control/share/ament_index/resource_index/packages
+copying resource/motor_control -> /home/smartcart/ros2_ws/src/motor_control/install/motor_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/smartcart/ros2_ws/src/motor_control/install/motor_control/share/motor_control
+running install_egg_info
+Copying build/motor_control/motor_control.egg-info to /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/python3.10/site-packages/motor_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing leftMotor script to /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/motor_control
+Installing movement script to /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/motor_control
+Installing rightMotor script to /home/smartcart/ros2_ws/src/motor_control/install/motor_control/lib/motor_control
+writing list of installed files to '/home/smartcart/ros2_ws/src/motor_control/build/motor_control/install.log'

@@ -1,0 +1,4 @@
+[console_scripts]
+distance_calculation = smartcart.distance_calculation:main
+ultra_dist = smartcart.ultra_dist:main
+

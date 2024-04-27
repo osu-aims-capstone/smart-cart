@@ -1,0 +1,3 @@
+source;share/motor_control/hook/pythonpath.ps1
+source;share/motor_control/hook/pythonpath.dsv
+source;share/motor_control/hook/pythonpath.sh

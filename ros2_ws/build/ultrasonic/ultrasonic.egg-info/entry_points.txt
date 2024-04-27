@@ -1,0 +1,6 @@
+[console_scripts]
+distance_calculation = ultrasonic.distance_calculation:main
+obstacle = ultrasonic.obstacle:main
+ultra_distL = ultrasonic.ultra_distL:main
+ultra_distR = ultrasonic.ultra_distR:main
+

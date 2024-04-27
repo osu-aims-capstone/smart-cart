@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: user-interface
+Version: 0.0.0
+Summary: User interface sends location and speed information to the motor control based on button pressesss
+Home-page: UNKNOWN
+Maintainer: smartcart
+Maintainer-email: smartcart@todo.todo
+License: Apache-2.0
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+

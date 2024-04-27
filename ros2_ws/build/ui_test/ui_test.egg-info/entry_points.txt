@@ -1,0 +1,3 @@
+[console_scripts]
+user_interface4 = ui_test.user_interface4:main
+

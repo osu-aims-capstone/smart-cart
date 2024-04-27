@@ -1,0 +1,5 @@
+[console_scripts]
+leftMotor = motorControl.leftMotorPublisher:main
+movement = motorControl.movementSubscriber:main
+rightMotor = motorControl.rightMotorPublisher:main
+

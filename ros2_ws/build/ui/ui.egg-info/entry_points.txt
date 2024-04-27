@@ -1,0 +1,6 @@
+[console_scripts]
+button_publisher = ui.button_publisher:main
+button_subscriber = ui.button_subscriber:main
+ui_client2 = ui.ui_client2:main
+user_interface = ui.ui_service:main
+

@@ -17,6 +17,8 @@ The autonomous mobile robot (AMR) “Smart cart” is designed to transport mate
 
 * Clone ros2_ws
 
+* Individual component codes can be found in initial-code branch
+
 ### Executing program
 
 * Go to the ros workspace launch directory:
